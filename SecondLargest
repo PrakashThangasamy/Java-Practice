@@ -1,0 +1,20 @@
+package basics;
+import java.util.Scanner;
+public class SecondLargest {
+	public static void main(String[] args) {
+		int size, max, smax;
+		max = smax = Integer.MIN_VALUE; //-2147483648;
+		Scanner in = new Scanner(System.in);
+		size = in.nextInt();
+		for (int i = 1; i<=size; i++) {
+			int x = in.nextInt();
+			if (max < x) {
+				smax = max;
+				max = x;
+			}
+			else if (smax < x && max != x)
+				smax = x;
+		}
+		System.out.println(smax);
+	}
+}
