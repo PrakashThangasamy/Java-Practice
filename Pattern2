@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        int len = str.length();
+        for (int i = len; i >= 1; i--) {
+            System.out.printf("%-" + len + "." + i + "s%"+len+"."+i+"s\n", str,str);
+        }
+         for (int i = len; i<= 1; i++) {
+            System.out.printf("%-" + len + "." + i + "s%"+len+"."+i+"s\n", str,str);
+        }
+    }
+}
