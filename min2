@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        String s1[] =new java.util.Scanner(System.in).nextLine().split(" ");
+        int a,b,c,d,max,mid1,mid2,min;
+       a = Integer.parseInt(s1[0]);
+       b = Integer.parseInt(s1[1]);
+       c = Integer.parseInt(s1[2]);
+       d = Integer.parseInt(s1[3]);
+      max = a>b&&a>c&&a>d?a:(b>c&&b>d? b:(c>d?c:d));
+      min = a<b&&a<c&&a<d?a:(b<c&&b<d? b:(c<d?c:d));
+      mid1 =a+b+c-(max+min);
+      mid2 =a+b+c+d-(max+min);
+     System.out.println(min+"<"+mid1+"<"+mid2+"<"+max);
+   }
+}
