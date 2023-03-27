@@ -1,0 +1,16 @@
+public class Main
+{
+    public static void main(String args[])
+    {
+        int k, m, D, C;
+        k = 8;
+        m = 1;
+        D = 23;
+        C = 20;
+        int f = k + (13*m-1)/5 + D + (D/4) + (C/4) - 2*C;
+        int remainder = f % 7;
+        String[] days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday"};
+        String day = days[remainder];
+        System.out.println(day);
+    }
+}
