@@ -1,0 +1,14 @@
+//min_max of two number
+public class Main {
+    public static void main(String[] args) {
+        String s1[] =new java.util.Scanner(System.in).nextLine().split(" ");
+        int a,b,c,max,mid,min;
+       a = Integer.parseInt(s1[0]);
+       b = Integer.parseInt(s1[1]);
+       c = Integer.parseInt(s1[2]);
+      max = a>b&&a>c?a:(b>c? b:c);
+      min = a<b&&a<c?a:(b<c? b:c);
+      mid =a+b+c-(max+min);
+     System.out.println(min+"<"+mid+"<"+max);
+   }
+}
