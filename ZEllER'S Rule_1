@@ -1,0 +1,22 @@
+public class Main
+{
+    public static void main(String args[]) 
+    {
+        String sdate []= new java.util.Scanner(System.in).nextLine().split("/"); 
+        int k = Integer.parseInt(sdate[0]);
+        int m = Integer.parseInt(sdate[1]);
+        int y = Integer.parseInt(sdate[2]);
+        int C,D;
+        if (m==1||m==2) {
+            m+=10;
+            y--;
+        } else
+        m-=2;
+            D=y%100;
+            C=y/100;
+        int f = (k + (13*m-1)/5 + D + (D/4) + (C/4) - 2*C)%7;
+        if(f<0)f+=7;
+        String[] days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday"};
+        System.out.println(days[f]);  
+        }
+        }
