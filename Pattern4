@@ -1,0 +1,12 @@
+//to print the words like x pattern simple code
+public class Main{
+    public static void main(String[] arg){
+        String str = new java.util.Scanner(System.in).nextLine();
+        int len = str.length();
+        for (int i = 1; i<len; i++)
+            System.out.printf("%"+i+"c%"+(2*(len-i))+"c\n", str.charAt(i-1), str.charAt(i-1));
+        System.out.printf("%"+len+"c\n", str.charAt(len-1));
+        for (int i = len-1; i>=1; i--)
+            System.out.printf("%"+i+"c%"+(2*(len-i))+"c\n", str.charAt(i-1), str.charAt(i-1));
+    }
+}
