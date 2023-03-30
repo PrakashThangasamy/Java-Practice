@@ -1,0 +1,29 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// The main method must be in a class named "Main".
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name = sc.nextLine();
+        String[] date = sc.nextLine().split("[-/]");
+        String res ="";
+        int dob = Integer.parseInt(date[0])+Integer.parseInt(date[1])+Integer.parseInt(date[2]);
+        if(date[2].length() != 2){
+            System.out.print("Enter Valid Year");
+            return;
+        }
+        int dobSum;
+        if(dob % 9 == 0)
+            dobSum = 9;
+        else
+            dobSum = dob%9;
+        System.out.print(dobSum);
+        res += (char)(dobSum+64)+""+date[1];
+        char c = (name.length() % 2 == 0) ? '$' : '#'; 
+        res += Character.toUpperCase(name.charAt(0))+""+ Character.toUpperCase(name.charAt(name.length()-1))+""+String.format("%02d",name.length());
+        res += ""+c;
+        System.out.println(res);
+    }
+}
